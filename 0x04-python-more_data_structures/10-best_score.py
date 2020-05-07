@@ -2,8 +2,11 @@
 def best_score(a_dictionary):
     if not a_dictionary:
         return None
-    best = 0
-    for key, value in a_dictionary.items():
-        if value > best:
-            best = value
-    return key
+    list_1 = list(a_dictionary.keys())
+    list_2 = sorted(a_dictionary.values())
+    list_3 = list(a_dictionary.values())
+    best = list_2[-1]
+    for i in range(len(list_3)):
+        if list_3[i] == best:
+            best = list_1[i]
+    return best
