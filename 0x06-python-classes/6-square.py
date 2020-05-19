@@ -23,6 +23,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """ Sets the value on size and validate a valid number"""
         if type(value) is not tuple or len(value) is not 2 or \
            type(value[0]) is not int or value[0] < 0 or \
            type(value[1]) is not int or value[1] < 0:
@@ -38,18 +39,12 @@ class Square:
     @size.setter
     def size(self, value):
         """ Sets the value on size and validate a valid number"""
-        if self.__validate(value):
-            self.__size = value
-
-    def __validate(self, size):
-        """ Validates if the number is an int and > 0 """
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            return True
-        return False
+            self.__size = value
 
     def area(self):
         """ Return the area of the square """
@@ -60,7 +55,7 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            print("\n" * self.__position[1], end="")
+            print('\n' * self.__position[1], end="")
             for i in range(self.__size):
                 print(" " * self.__position[0], end="")
                 print("#" * self.__size)
