@@ -24,15 +24,13 @@ class Square:
     @position.setter
     def position(self, value):
         """ Sets the value on size and validate a valid position """
-        msj = 'position must be a tuple of 2 positive integers'
-        if type(value) != tuple or len(value) != 2:
-            raise TypeError(msj)
-
-        for items in value:
-            if type(items) != int or items < 0:
+        msj = "position must be a tuple of 2 positive integers"
+        if type(value) != tuple or len(value) != 2 or \
+           type(value[0]) != int or value[0] < 0 or \
+           type(value[1]) != int or value[1] < 0:
                 raise TypeError(msj)
-
-        self.__position = value
+        else:
+            self.__position = value
 
     @property
     def size(self):
