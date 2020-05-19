@@ -13,18 +13,18 @@ class Square:
         Size: The size of the square
         Position: The position of the square
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def position(self):
         """ Gets the value """
-        return self.__position
+        return(self.__position)
 
     @property
     def size(self):
         """ Gets the value """
-        return self.__size
+        return(self.__size)
 
     @position.setter
     def position(self, value):
@@ -48,7 +48,7 @@ class Square:
 
     def area(self):
         """ Return the area of the square """
-        return self.__size ** 2
+        return(self.__size ** 2)
 
     def my_print(self):
         """ Print all the square with # """
