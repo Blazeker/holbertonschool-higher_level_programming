@@ -3,32 +3,26 @@
 
 
 class Square:
-    """ An class called Square """
+    """ An class called Square
 
-    def __init__(self, size=0, position=(0, 0)):
-        """
-        Initialize the data
-        And validates if the number is an int
-        and > 0
+
+        Attributes:
         Size: The size of the square
-        Position: The position of the square
-        """
+        Position: The position of the square"""
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
     @property
     def position(self):
-        """ Gets the value """
         return(self.__position)
 
     @property
     def size(self):
-        """ Gets the value """
         return(self.__size)
 
     @position.setter
     def position(self, value):
-        """ Sets the value on size and validate a valid number"""
         if type(value) is not tuple or len(value) is not 2 or \
            type(value[0]) is not int or value[0] < 0 or \
            type(value[1]) is not int or value[1] < 0:
@@ -38,7 +32,6 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """ Sets the value on size and validate a valid number"""
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -47,11 +40,9 @@ class Square:
             self.__size = value
 
     def area(self):
-        """ Return the area of the square """
         return(self.__size ** 2)
 
     def my_print(self):
-        """ Print all the square with # """
         if self.__size == 0:
             print()
         else:
