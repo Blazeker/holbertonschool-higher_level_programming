@@ -42,6 +42,8 @@ class Square:
 
     def my_print(self):
         """ Print all the square with # """
+        if self.__size == 0:
+            print()
         for i in range(0, self.__size):
             j = 0
             for j in range(0, self.__size):
