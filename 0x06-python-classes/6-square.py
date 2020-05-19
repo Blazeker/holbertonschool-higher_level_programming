@@ -61,14 +61,10 @@ class Square:
 
     def my_print(self):
         """ Print all the square with # """
-        newl = self.__position[1]
-        rows = self.__position[0]
-        auxs = self.__size
-        if auxs == 0:
+        if self.__size == 0:
             print()
-
-        for new in range(newl):
-            print()
-
-        for row in range(auxs):
-            print((' ' * rows) + ('#' * auxs))
+        else:
+            print("\n" * self.__position[1], end="")
+            for i in range(self.__size):
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
