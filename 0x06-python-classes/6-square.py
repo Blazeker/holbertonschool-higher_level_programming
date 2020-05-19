@@ -13,10 +13,8 @@ class Square:
         Size: The size of the square
         Position: The position of the square
         """
-        if self.__validate(size):
-            self.__size = size
-        if self.__validateP(position):
-            self.__position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def position(self):
@@ -55,6 +53,18 @@ class Square:
         if len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
             return False
+        elif (not isinstance(position, tuple)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+            return False
+        elif (not isinstance(position[0], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+            return False
+        elif(not isinstance(position[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+            return False
+        elif (position[0] < 0 or position[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers") 
+            return False
         return True
 
     def area(self):
@@ -65,14 +75,12 @@ class Square:
         """ Print all the square with # """
         if self.__size == 0:
             print()
-            return
-        for i in range(0, self.__position[1]):
-            print()
-        for i in range(0, self.__size):
-            j = 0
-            pos = 0
-            for pos in range(0, self.__position[0]):
-                print(" ", end="")
-            for j in range(0, self.__size):
-                print("#", end="")
-            print()
+        else:
+            for i in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for j in range(self.__position[0]):
+                    print(" ", end="")
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
