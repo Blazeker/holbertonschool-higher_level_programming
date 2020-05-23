@@ -35,7 +35,3 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 >>> text_indentation(" Santiago ")
 Santiago
-
->>> text_indentation(" Santiago. ")
-Santiago.
-<BLANKLINE>
