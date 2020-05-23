@@ -21,7 +21,6 @@ crack
 >>> text_indentation(".  ")
 .
 <BLANKLINE>
-<BLANKLINE>
 
 >>> text_indentation(7)
 Traceback (most recent call last):
