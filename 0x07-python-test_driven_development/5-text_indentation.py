@@ -8,10 +8,6 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    special = ['.', '?', ':']
-    aux_s = ""
-    for chara in text:
-        aux_s += chara
-        if chara in special:
-            aux_s += "\n\n"
-    print(aux_s, end="")
+    for x in ".:?":
+        text = (x + "\n\n").join([w.strip(" ") for w in text.split(x)])
+    print(text, end="")
