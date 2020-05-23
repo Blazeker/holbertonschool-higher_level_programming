@@ -63,3 +63,8 @@ ValueError: could not convert string to float: 'Santiago'
 Traceback (most recent call last):
 	...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(9999e9999)
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
