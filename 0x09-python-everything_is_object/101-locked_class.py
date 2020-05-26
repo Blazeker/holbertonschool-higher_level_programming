@@ -3,5 +3,6 @@
 
 
 class LockedClass:
-  """ Reduces the consumption of ram using slot to define only first_name attribute """
+  """ Reduces the consumption of ram using slot to define
+  only first_name attribute """
   __slots__ = ["first_name"]
