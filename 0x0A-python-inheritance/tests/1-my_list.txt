@@ -1,0 +1,19 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(-1000)
+>>> my_list.append(2000)
+>>> my_list.append(0)
+>>> print(my_list)
+[-1000, 2000, 0]
+
+>>> my_list.print_sorted()
+[-1000, 0, 2000]
+
+>>> my_list = MyList()
+>>> my_list.append(800000000000000)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 800000000000000]
+
+>>> print(my_list)
+[0, 800000000000000]
