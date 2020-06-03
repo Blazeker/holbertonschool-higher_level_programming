@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Module for pascal triangle """
 
 
 def pascal_triangle(n):
+    """ Pascal triangle """
     tri = []
     ini = 1
     for i in range(0, n):
