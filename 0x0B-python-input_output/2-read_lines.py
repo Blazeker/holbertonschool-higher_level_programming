@@ -4,11 +4,11 @@
 
 def read_lines(filename="", nb_lines=0):
     """ Read the n lines """
-    cont = 0
     with open(filename, encoding='utf-8') as f:
         if (nb_lines <= 0):
                 print(f.read(), end="")
         else:
+            cont = 0
             while (cont < nb_lines):
-                print(f.read(), end="")
+                print(f.readline(), end="")
                 cont += 1
