@@ -19,7 +19,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """ getter for width """
-        return self.__witdh
+        return self.__width
 
     @property
     def height(self):
