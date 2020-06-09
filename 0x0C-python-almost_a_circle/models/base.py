@@ -4,6 +4,8 @@
 
 import json
 import csv
+import turtle
+
 
 
 class Base():
@@ -103,3 +105,41 @@ class Base():
         except:
             return "[]"
         return res
+
+    def draw(list_rectangles, list_squares):
+        t = turtle.Turtle()
+        t.bgcolor("white")
+        t.title("The wonderful world of graphics of python")
+        t.pen(pencolor="black", fillcolor="gray", pensize=15, speed=15)
+
+        for i in list_rectangles:
+            if "rectangle" in str(type(i)):
+                t.pendown()
+                wid = i.width
+                hei = i.height
+                x = i.x
+                y = i.y
+                t.setposition(x, y)
+                t.color("black")
+                t.begin_fill()
+                t.forward(wid)
+                t.left(90)
+                t.forward(hei)
+                t.left(90)
+                t.forward(wid)
+                t.left(90)
+                t.forward(hei)
+                t.end_fill()
+        for i in list_squares:
+            if "square" in str(type(i)):
+                t.penup
+                siz = i.size
+                x = i.x
+                y = i.y
+                t.setposition(x, y)
+                t.color("red")
+                t.begin_fill()
+                for j in range(4):
+                    t.forward(siz)
+                    t.left(90)
+                t.end_fill()
