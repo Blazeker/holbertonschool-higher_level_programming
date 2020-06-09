@@ -11,6 +11,7 @@ class Base():
     __nb_objects = 0
 
     def __init__(self, id=None):
+    """ init method """
         if id is not None:
             self.id = id
         else:
@@ -19,12 +20,14 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ to_json_string method """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ save_to_file method """
         with open(cls.__name__ + ".json", "w") as f:
             if list_objs is None:
                 f.write("[]")
@@ -65,6 +68,7 @@ class Base():
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """ save_to_file_csv method """
         if list_objs is None or list_objs == []:
                 csvfile.write("[]")
         with open(cls.__name__ + ".csv", "w",) as f:
@@ -78,6 +82,7 @@ class Base():
 
     @classmethod
     def load_from_file_csv(cls):
+        """ load_from_file_csv method """
         res = []
         dic = {}
         try:
