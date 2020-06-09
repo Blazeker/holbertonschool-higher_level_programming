@@ -59,14 +59,15 @@ class Base():
     def load_from_file(cls):
         """ Method that return a list of instances """
         list_aux = []
-        with open(cls.__name__ + ".json", r) as f:
-            inst = f.read()
-        inst = cls.from_json_string(inst)
-        for i in inst:
-            if type(i) == dict:
+        try:
+            with open(cls.__name__ + ".json", r) as f:
+                inst = f.read()
+        except:
+            inst = '[]'
+        inst2 = cls.from_json_string(inst)
+        if inst2:
+            for i in inst2:
                 list_aux.append(cls.create(**i))
-            else:
-                list_aux(i)
         return list_aux
 
     @classmethod
