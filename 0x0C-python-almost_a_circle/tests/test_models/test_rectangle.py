@@ -61,7 +61,7 @@ class Test_Rectangles(unittest.TestCase):
 
     def test_width_getter(self):
         r = Rectangle(1, 2, 3, 5, 8)
-        self.assertEqual(1, r.width)
+        self.assertEaqul(1, r.width)
 
     def test_width_setter(self):
         r = Rectangle(1, 1, 2, 3, 5)
