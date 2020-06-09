@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class Tests_Rectangles(unittest.TestCase):
+class Test_Rectangles(unittest.TestCase):
     """ Tests for all rectangles exercises """
     def test_rectangle_istance(self):
         self.assertIsInstance(Rectangle(5, 12), Base)
