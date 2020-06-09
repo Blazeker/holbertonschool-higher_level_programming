@@ -9,7 +9,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestBase_creation(unittest.TestCase):
+class Test_Base_creation(unittest.TestCase):
     """ Test for all the base cases """
 
     def test_empty_id(self):

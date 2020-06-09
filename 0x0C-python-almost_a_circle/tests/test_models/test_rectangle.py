@@ -6,6 +6,7 @@ import sys
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
+from models.square import Square
 
 
 class Test_Rectangles(unittest.TestCase):

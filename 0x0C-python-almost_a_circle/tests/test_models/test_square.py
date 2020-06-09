@@ -4,10 +4,12 @@
 
 import sys
 import unittest
+from models.base import Base
+from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestSquare(unittest.TestCase):
+class Test_Square(unittest.TestCase):
     """ class for test case for rectangle class """
 
     def test_basic_id(self):
