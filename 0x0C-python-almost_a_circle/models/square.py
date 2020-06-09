@@ -7,10 +7,13 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """ Square class constructor and methods """
+
     def __init__(self, size, x=0, y=0, id=None):
+        """ Init for square class """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ __str__ method """
         return "[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
                                              self.id,
                                              self.x,
@@ -19,10 +22,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ Size getter """
         return self.width
 
     @size.setter
     def size(self, value):
+        """ Size setter """
         if type(value) is not int:
             raise TypeError("witdh must be an integer")
         if value <= 0:
@@ -31,6 +36,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ Update method """
         if args is not None and len(args) > 0:
             for i, args in enumerate(args):
                 if i == 0:
@@ -53,6 +59,7 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
+        """ To_dictionary method """
         return (
                 {"id": self.id,
                  "size": self.size,
