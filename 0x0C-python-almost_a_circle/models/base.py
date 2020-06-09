@@ -60,7 +60,7 @@ class Base():
         """ Method that return a list of instances """
         list_aux = []
         try:
-            with open(cls.__name__ + ".json", r) as f:
+            with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
                 inst = f.read()
         except:
             inst = '[]'
