@@ -8,8 +8,7 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
-    """class for test case for rectangle class
-    """
+    """ class for test case for rectangle class """
 
     def test_basic_id(self):
         """tests basic functionality

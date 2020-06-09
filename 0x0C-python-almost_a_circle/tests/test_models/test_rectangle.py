@@ -7,6 +7,7 @@ import unittest
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class Tests_Rectangles(unittest.TestCase):
     """ Tests for all rectangles exercises """
     def test_rectangle_istance(self):
@@ -355,9 +356,9 @@ class Tests_Rectangles(unittest.TestCase):
         self.assertEqual("####\n####\n####\n####\n####\n", capture.getvalue())
 
     def test_display_case1(self):
-        r = Rectangle(4, 5, 1, 0, 1)
+        r = Rectangle(3, 5, 1, 0, 1)
         capture = self.capture_stdout(r, "display")
-        self.assertEqual(" ####\n ####\n ####\n ####\n ####\n", capture.getvalue())
+        self.assertEqual(" ###\n ###\n ###\n ###\n ###\n", capture.getvalue())
 
     def test_display_case2(self):
         r = Rectangle(4, 5, 0, 1, 0)
@@ -618,12 +619,6 @@ class Tests_Rectangles(unittest.TestCase):
         r = Rectangle(14, 14, 14, 14, 14)
         r.update(height=5, id=109, a=1, b=54, x=19, y=7)
         self.assertEqual("[Rectangle] (109) 19/7 - 14/5", str(r))
-
-    """ To dictionary tests """
-    """def test_to_dictionary_case1(self):
-        r = Rectangle(14, 1, 1, 9, 5)
-        correct = {'x': 1, 'y': 9, 'id': 5, 'height': 1, 'width': 14}
-        self.assertDictEqual(correct, r.to_dictionary())"""
 
     def test_to_dictionary_case2(self):
         r1 = Rectangle(14, 1, 1, 9, 5)
