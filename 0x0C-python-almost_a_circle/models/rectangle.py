@@ -22,13 +22,13 @@ class Rectangle(Base):
         return self.__witdh
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """ setter for width """
-        if type(width) is not int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if width <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
-        self.__witdh = width
+        self.__witdh = value
 
     @property
     def height(self):
@@ -36,27 +36,26 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """ setter for height """
-        if type(height) is not int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = height
-
+        self.__height = value
     @property
     def x(self):
         """ getter for x """
         return self.__x
 
     @x.setter
-    def x(self, x):
+    def x(self, value):
         """ setter for x """
-        if type(x) is not int:
+        if type(value) is not int:
             raise TypeError("x must be an integer")
-        if x < 0:
+        if value < 0:
             raise ValueError("x must be >= 0")
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -64,13 +63,13 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y):
+    def y(self, value):
         """ setter for y """
-        if type(y) is not int:
+        if type(value) is not int:
             raise TypeError("y must be an integer")
-        if y < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
-        self.__y = y
+        self.__y = value
 
     def area(self):
         """ Area method """
