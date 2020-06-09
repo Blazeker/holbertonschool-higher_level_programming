@@ -236,7 +236,7 @@ class Test_Base_creation(unittest.TestCase):
         self.assertEqual(list_input, list_output)
 
     def test_from_json_string_None(self):
-        self.assertEqual("[]", Base.from_json_string(None))
+        self.assertEqual([], Base.from_json_string(None))
 
     def test_from_json_string_empty(self):
         self.assertEqual([], Base.from_json_string("[]"))
@@ -260,7 +260,7 @@ class Test_Base_creation(unittest.TestCase):
         r1 = Rectangle(30, 50, 10, 4, 17)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (17) 10/4 - 1/50", str(r2))
+        self.assertEqual("[Rectangle] (17) 10/4 - 30/50", str(r2))
 
     def test_create_rectangle_isnot(self):
         r1 = Rectangle(30, 50, 10, 15, 70)

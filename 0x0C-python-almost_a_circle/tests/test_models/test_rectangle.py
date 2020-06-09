@@ -60,10 +60,6 @@ class Test_Rectangles(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(Rectangle(2, 3, 6, 7, 1).__y)
 
-    def test_width_getter(self):
-        r = Rectangle(1, 2, 3, 5, 8)
-        self.assertEaqul(1, r.width)
-
     def test_width_setter(self):
         r = Rectangle(1, 1, 2, 3, 5)
         r.width = 14

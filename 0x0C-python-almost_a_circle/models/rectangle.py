@@ -87,7 +87,7 @@ class Rectangle(Base):
             if i != 0:
                 print()
             cont2 = 0
-            for j in range(0, self.__witdh):
+            for j in range(0, self.__width):
                 while cont2 < self.x:
                     print(end=" ")
                     cont2 += 1
