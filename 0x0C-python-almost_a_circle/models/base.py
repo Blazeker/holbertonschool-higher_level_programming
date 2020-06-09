@@ -50,7 +50,7 @@ class Base():
         """ Returns JSON strings """
         if type(json_string) != str and json_string is not None:
             raise TypeError
-        if type(json_string) != str or len(json_string) == "[]" or json_string == "":
+        if json_string is None or json_string == "[]" or json_string == "":
             return []
         else:
             return json.loads(json_string)
