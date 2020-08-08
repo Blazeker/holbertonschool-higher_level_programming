@@ -15,7 +15,6 @@ if __name__ == "__main__":
                 ORDER BY id""".format(name))
     rows = cur.fetchall()
     for row in rows:
-        if rows[1] == name:
-            print(row)
+        print(row)
     cur.close()
     db.close()
