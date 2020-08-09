@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""script that lists all State objects"""
+"""query all states in State model"""
 
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
