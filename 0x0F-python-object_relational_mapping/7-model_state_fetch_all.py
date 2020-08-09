@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""query all states in State model"""
+"""script that lists all State objects from the database"""
 
 import sys
 from model_state import Base, State
